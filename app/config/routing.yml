@@ -1,0 +1,4 @@
+project_line_of_work:
+    resource: "@ProjectLineOfWorkBundle/Resources/config/routing.yml"
+    prefix:   /
+

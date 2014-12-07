@@ -1,0 +1,4 @@
+services:
+#    project_line_of_work.example:
+#        class: Project\LineOfWorkBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
