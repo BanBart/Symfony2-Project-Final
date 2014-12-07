@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-        <title>{% block title %}Homepage{% endblock %} - Line Of Work</title>
+        <title>{% block title %}Homepage - Line Of Work{% endblock title%}</title>
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -21,19 +21,17 @@
         {% block header %}{% endblock header %}                     
 
         {% block slider %}{% endblock slider %}
-        <div class="container">
-            <div class="row">
+
                 
                     {% block body %}{% endblock body %}  
-                
-                    {% block footer %}{% endblock footer %}    
+                    
+                            {% block footer %}{% endblock footer %}
+                        
+                        
                                
-            </div>
-        </div>
-         
+
         {% block javascripts %}
             {% javascripts '@jquery' '@bootstrap_js'
-                '@ProjectLineOfWorkBundle/Resources/public/js/custom.js'
                 'bundles/fosjsrouting/js/router.js'
                 filter='?uglifyjs2' %}
                 <script type="text/javascript" src="{{ asset_url }}"></script>

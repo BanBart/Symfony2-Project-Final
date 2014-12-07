@@ -1,3 +1,3 @@
 saky_hank_official_site_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: SakyHankOfficialSiteBundle:Default:index }
+    path:     /
+    defaults: { _controller: SakyHankOfficialSiteBundle:Page:index }

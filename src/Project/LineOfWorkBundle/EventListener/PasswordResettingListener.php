@@ -13,7 +13,6 @@ use FOS\UserBundle\Event\FormEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Symfony\Component\HttpFoundation\Session\Session;
 
 
 /**
@@ -24,11 +23,10 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class PasswordResettingListener implements EventSubscriberInterface{
     
     private $router;
-    private $session;
 
-    public function __construct(UrlGeneratorInterface $router, Session $session) {
+
+    public function __construct(UrlGeneratorInterface $router) {
         $this->router = $router;
-        $this->session = $session;
     }
     
     public static function getSubscribedEvents() {
@@ -45,7 +43,6 @@ class PasswordResettingListener implements EventSubscriberInterface{
     
     public function onChangePasswordSuccess(FormEvent $event){
         $url = $this->router->generate('project_line_of_work_user_profile');
-        $this->session->getFlashBag()->add('success','You have been sucessfully changed');
         $event->setResponse(new RedirectResponse($url));
     }
 

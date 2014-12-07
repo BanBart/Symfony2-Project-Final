@@ -1,0 +1,40 @@
+{% extends 'SakyHankOfficialSiteBundle::layout.html.twig' %}
+
+    {% block home %}
+    <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>image</h2>
+            </div>
+            <div class="col-sm-6 col-sm-offset-6">
+                <ul class="list-inline">
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>              
+    {% endblock home %}
+    {% block projects %}
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="col-sm-6">
+                <h2>projects</h2>
+            </div>
+            <div class="col-sm-6 col-sm-offset-6">
+                <ul class="list-inline">
+                    <li><a href="#">Symfony2</a>
+                        <ul>
+                            <li><a href="{{ path('project_line_of_work_homepage') }}">preview</a></li>
+                            <li>source-code:<a href="https://github.com/SakyHank/Symfony2-Project-Final.git">https://github.com/SakyHank/Symfony2-Project-Final.git</a></li>
+                            <li><a href="#">note</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    {% endblock projects %}

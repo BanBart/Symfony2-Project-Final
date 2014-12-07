@@ -6,7 +6,6 @@ services:
     project_lineofwork.password_resetting:
         class: Project\LineOfWorkBundle\EventListener\PasswordResettingListener
         arguments:
-            - @session
             - @router
         tags:
             - { name: kernel.event_subscriber }

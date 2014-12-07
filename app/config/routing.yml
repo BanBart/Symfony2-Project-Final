@@ -1,10 +1,10 @@
 saky_hank_official_site:
     resource: "@SakyHankOfficialSiteBundle/Resources/config/routing.yml"
-    prefix:   /ddd
+    prefix:   /
 
 project_line_of_work:
     resource: "@ProjectLineOfWorkBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /project/symfony2
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
