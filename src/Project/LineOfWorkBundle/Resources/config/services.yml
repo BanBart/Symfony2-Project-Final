@@ -1,4 +1,77 @@
 services:
-#    project_line_of_work.example:
-#        class: Project\LineOfWorkBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    authentication_handler: 
+        class: Project\LineOfWorkBundle\Handler\AuthenticationHandler
+        arguments: [ '@security.context' , '@router' ]
+            
+    project_lineofwork.password_resetting:
+        class: Project\LineOfWorkBundle\EventListener\PasswordResettingListener
+        arguments:
+            - @session
+            - @router
+        tags:
+            - { name: kernel.event_subscriber }
+            
+    project_lineofwork.form.enquiry:
+        class: Project\LineOfWorkBundle\Form\EnquiryType
+        tags: 
+            - { name: form.type, alias: enquiry }
+        
+    project_lineofwork.twig.extension:
+        class: Project\LineOfWorkBundle\Twig\Extensions\ProjectLineOfWorkExtension
+        tags:
+            - { name: twig.extension }
+            
+    sonata.admin.category:
+        class: Project\LineOfWorkBundle\Admin\CategoryAdmin
+        tags: 
+            - { name: sonata.admin, manager_type: orm, group: 'Job Related Entities', label: 'Category' }
+        arguments:
+            - ~
+            - Project\LineOfWorkBundle\Entity\Category
+            - ~
+        
+    sonata.admin.job:
+        class: Project\LineOfWorkBundle\Admin\JobAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Job Related Entities', label: 'Job' }
+        arguments:
+            - ~
+            - Project\LineOfWorkBundle\Entity\Job
+            - ~
+           
+    sonata.admin.phrase:
+        class: Project\LineOfWorkBundle\Admin\PhraseAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Components', label: 'Phrase' }
+        arguments:
+            - ~
+            - Project\LineOfWorkBundle\Entity\Phrase
+            - ~
+            
+    sonata.admin.feedback:
+        class: Project\LineOfWorkBundle\Admin\FeedbackAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Components', label: 'Feedback' }
+        arguments:
+            - ~
+            - Project\LineOfWorkBundle\Entity\Feedback
+            - ~
+            
+    sonata.admin.article:
+        class: Project\LineOfWorkBundle\Admin\ArticleAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Page', label: 'Article' }
+        arguments:
+            - ~
+            - Project\LineOfWorkBundle\Entity\Article
+            - ~
+            
+    sonata.admin.commercial:
+        class: Project\LineOfWorkBundle\Admin\CommercialAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Components', label: 'Commercial' }
+        arguments:
+            - ~
+            - Project\LineOfWorkBundle\Entity\Commercial
+            - ~
+            

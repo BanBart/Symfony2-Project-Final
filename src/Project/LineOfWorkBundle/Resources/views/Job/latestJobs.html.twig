@@ -1,0 +1,12 @@
+{% for job in jobs %}
+<div class="col-lg-3">
+    <div class='job-slider text-center'>
+        <h3><a href="{{ path('project_line_of_work_job_show', {'id':job.id}) }}">{{ job.position }}</a></h3>
+        <p><a href="{{ path('project_line_of_work_category_show', {'slug':job.category.slug}) }}">{{ job.category }}</a></p>
+        <p>{{ job.company }}</p>
+        <p><a href="{{ job.url }}">{{ job.url }}</a></p>
+        <p>{{ job.location }}</p>
+        <p class='text-muted'>Added: {{ job.createdat|created_ago }}</p>
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,54 @@
+
+
+<div class="row">
+    <form action='{{ path('project_line_of_work_search') }}' method="POST">
+        <div class="col-lg-12">
+        {{ form_widget(form.position, { 'attr': {'placeholder': 'position/location/category...', 'value': app.request.get('query'),'list':'search_data_list'} })}}
+        <datalist id='search_data_list'>
+            <option></option>
+        </datalist>
+        <a class='pull-right search-advanced' data-toggle='collapse' data-target='#more_options'>Advanced search &raquo;</a>
+        </div>
+        {#<div class="col-lg-7">
+            <b>Advanced search &raquo;</b>
+        </div>
+        <div class="col-lg-5">
+            {{ form_widget(form.choice)}}
+        </div>#}
+        <div id='more_options' class="col-lg-12 collapse">
+            <div class='row'>
+                <div class="col-lg-6">
+                    {{ form_widget(form.category)}}
+                </div>
+                <div  class="col-lg-6">
+                    {{ form_widget(form.location, { 'attr': {'placeholder': 'location...'} })}}
+                </div>
+            </div> 
+        </div>      
+        <div class="clearfix visible-lg-block"></div>
+        <div class="col-lg-6 col-lg-offset-3">
+            <button id="search_btn" type="submit" class="btn custom-button form-control has-spinner">
+                <span class="spinner"><i class="glyphicon gly glyphicon-refresh"></i></span>
+                Search</button>
+        </div>
+    </form>  
+</div>
+
+
+{#<form>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="text" class="form-control custom-form"  placeholder="Search&hellip;">  
+                                </div>
+                                <div class="clearfix visible-lg-block"></div>
+                                <div class="col-lg-6">
+                                    {{ render(controller('ProjectLineOfWorkBundle:Category:optionList'))}}
+                                </div>
+                                <div class="clearfix visible-lg-block"></div>
+                                <div class="col-lg-6 col-lg-offset-3">
+                                    
+                                        <button type="submit" class='btn custom-button form-control'>Search</button>
+                                                                 
+                                </div>
+                            </div>
+                        </form>#}

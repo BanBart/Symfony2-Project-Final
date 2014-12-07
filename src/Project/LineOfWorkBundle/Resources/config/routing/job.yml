@@ -1,0 +1,38 @@
+project_line_of_work_job:
+    path:     /
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:index" }
+ 
+project_line_of_work_job_sort:
+    path:   /sort
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:sort" }
+    requirements:
+        _method: POST
+    options:
+        expose: true
+
+project_line_of_work_job_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:show" }
+
+project_line_of_work_job_new:
+    path:     /new
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:new" }
+
+project_line_of_work_job_create:
+    path:     /create
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:create" }
+    requirements: { _method: post }
+
+project_line_of_work_job_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:edit" }
+
+project_line_of_work_job_update:
+    path:     /{id}/update
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:update" }
+    requirements: { _method: post|put }
+
+project_line_of_work_job_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProjectLineOfWorkBundle:Job:delete" }
+    requirements: { _method: post|delete }

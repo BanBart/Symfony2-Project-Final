@@ -1,0 +1,32 @@
+<div class="col-lg-12 phrase">
+    <div class="row">                             
+        <div class="col-lg-2 col-lg-offset-1">
+            <div class="number">
+                {% for phrase in phrases %}
+                    <h1 class='{{ loop.first ? 'phrase-active-number' : 'phrase-normal-number' }}'> 
+                        {{ phrase.mainheader }}
+                    </h1>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-lg-9 catchy">
+            {% for phrase in phrases %}
+            <div class='{{ loop.first ? 'phrase-active-slogan' : 'phrase-normal-slogan' }}'> 
+                <h3>{{ phrase.mediumheader }}</h3>
+                <p>{{ phrase.mediumparagraph }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="clearfix visible-lg-block"></div>
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="border-bottom"></div>
+        </div>
+        <div class="col-lg-9 col-lg-offset-3 bottom-phrase">
+            {% for phrase in phrases %}
+                <p class='{{ loop.first ? 'phrase-active-bottom' : 'phrase-normal-bottom' }}'> 
+                    {{ phrase.bottomparagraph }}
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+</div>

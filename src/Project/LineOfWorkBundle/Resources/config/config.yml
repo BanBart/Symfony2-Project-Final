@@ -1,0 +1,4 @@
+parameters:
+    project_lineofwork.emails.contact_email: lineofworkbundle@gmail.com
+    max_jobs_on_category: 10
+    max_jobs_on_job_page_per_category: 10

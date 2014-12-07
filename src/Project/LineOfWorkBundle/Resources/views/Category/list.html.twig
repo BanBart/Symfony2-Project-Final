@@ -1,0 +1,5 @@
+<ul class="dropdown-menu dropdown-menu-custom">
+    {% for category in categories %}
+        <li><a href="{{ path('project_line_of_work_category_show', {'slug':category.slug}) }}">{{ category.name }}</a></li>
+    {% endfor %}
+</ul>

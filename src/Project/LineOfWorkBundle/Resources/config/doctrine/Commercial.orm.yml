@@ -1,0 +1,14 @@
+Project\LineOfWorkBundle\Entity\Commercial:
+    type: entity
+    repositoryClass: Project\LineOfWorkBundle\Repository\CommercialRepository
+    name: commercial
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields: 
+        name:
+            type: string
+            length: 50
+        content:
+            type: text

@@ -1,0 +1,19 @@
+Project\LineOfWorkBundle\Entity\Article:
+    type: entity
+    repositoryClass: Project\LineOfWorkBundle\Repository\ArticleRepository
+    name: article
+    id: 
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        article_type:
+            type: string
+            length: 100
+        content:
+            type: text
+        owner:
+            type: string
+            lenght: 50
+            nullable: true
+          

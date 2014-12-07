@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Jobs</source>
+                <target>Oferty pracy</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>Categories</source>
+                <target>Kategorie</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>Search</source>
+                <target>Szukaj</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Profile</source>
+                <target>Profil</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Sign in</source>
+                <target>Zarejestruj się</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

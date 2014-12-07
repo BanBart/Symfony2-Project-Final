@@ -1,0 +1,13 @@
+<table class="table">
+    <thead>
+        <tr id="sort">
+            <th><a>Position |<b id="arrow_normal">  &#8592;</b></a></th>
+            <th><a>Company |<b id="arrow_normal">  &#8592;</b></a></th>
+            <th><a>Location |<b id="arrow_normal">  &#8592;</b></a></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="jobs-body">
+        {{ include('ProjectLineOfWorkBundle:Job:list_jobs_body.html.twig', { 'jobs':jobs }) }}
+    </tbody>
+</table>

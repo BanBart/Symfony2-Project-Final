@@ -1,0 +1,18 @@
+{% extends 'ProjectLineOfWorkBundle::layout.html.twig' %}
+
+
+{% block main %}
+    <div class="col-lg-8 col-lg-offset-2 body-header">
+        <h2>Job creation</h2>
+    </div>
+    <div class="col-lg-8 col-lg-offset-2">
+        {{ form_start(form) }}
+        {{ form_row(form.type) }}
+        {{ form_row(form.category) }}
+        <div class="file-input">
+            {{ form_row(form.file) }}
+        </div>
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>  
+{% endblock %}

@@ -1,0 +1,14 @@
+Project\LineOfWorkBundle\Entity\Feedback:
+    type: entity
+    repositoryClass: Project\LineOfWorkBundle\Repository\FeedbackRepository
+    name: feedback
+    id:
+        id: 
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        feedbacker_name:
+            type: string
+            length: 50
+        content:
+            type: text

@@ -1,3 +1,74 @@
+project_line_of_work_job:
+    resource: "@ProjectLineOfWorkBundle/Resources/config/routing/job.yml"
+    prefix:   /{_locale}/job
+    requirements: 
+        _locale: en|pl
+    
+project_line_of_work_category:
+    resource: "@ProjectLineOfWorkBundle/Resources/config/routing/category.yml"
+    prefix: /{_locale}/category
+    requirements: 
+        _locale: en|pl
+        
 project_line_of_work_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: ProjectLineOfWorkBundle:Default:index }
+    path:     /{_locale}
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:index }
+    requirements: 
+        _locale: en|pl
+        
+project_line_of_work_language:
+    path:   /languageChange/
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:language }
+    
+project_line_of_work_search:
+    path:   /search
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:search }
+    requirements: { _method: post }
+    
+project_line_of_work_search_auto:
+    path:   /search_auto
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:searchAuto }
+    requirements: { _method: post }
+    options:
+        expose: true
+
+project_line_of_work_search_result:
+    path:   /{_locale}/search_result
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:searchResult }
+    requirements: 
+        _locale: en|pl
+    
+project_line_of_work_nonlocalized:
+    pattern: /
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:index }
+
+project_line_of_work_contact:
+    path:   /{_locale}/contact
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:contact }
+    requirements: 
+        _method:  POST|GET 
+        _locale: en|pl
+    
+project_line_of_work_about:
+    path:   /{_locale}/about
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:about }
+    requirements: 
+        _locale: en|pl
+
+project_line_of_work_user:
+    prefix: /{_locale}/user
+    resource: "@ProjectLineOfWorkBundle/Resources/config/routing/user.yml"
+    requirements: 
+        _locale: en|pl
+        
+project_line_of_work_jquery:
+    prefix: /jquery
+    resource: "@ProjectLineOfWorkBundle/Resources/config/routing/jquery.yml"
+
+project_line_of_work_commercial:
+    path: /commercial
+    defaults: { _controller: ProjectLineOfWorkBundle:Page:commercial }
+    requirements: 
+        _method: POST
+    options:
+        expose: true

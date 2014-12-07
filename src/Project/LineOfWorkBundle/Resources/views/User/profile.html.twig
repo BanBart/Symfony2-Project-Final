@@ -1,0 +1,11 @@
+{% extends 'ProjectLineOfWorkBundle::layout.html.twig' %}
+
+{% block main %}
+    <div class="col-lg-8 col-lg-offset-2 body-header">
+            <h2>Hi {{user.username}}</h2>          
+    </div>
+    <div class="col-lg-8 col-lg-offset-2">
+        <h4><a href="{{ path('fos_user_change_password') }}">Change your password</a></h4>
+    </div>
+                
+{% endblock %}

@@ -1,0 +1,35 @@
+Project\LineOfWorkBundle\Entity\User:
+    properties:
+        email:
+            - NotBlank:
+                message: "Please enter an email"
+        username:
+            - NotBlank:
+                message: "Please enter a username"
+                
+Project\LineOfWorkBundle\Entity\Job:
+    properties:
+        category:
+            - NotBlank: ~
+        type:
+            - NotBlank: ~
+            - Choice: { callback: getTypeValues }
+        company:
+            - NotBlank: ~
+        position:
+            - NotBlank: ~
+        location:
+            - NotBlank: ~
+        description:
+            - NotBlank: ~
+        how_to_apply:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email: ~
+        url:
+            - Url: ~
+        file:
+            - Image: ~
+            - File:
+                maxSize: 6000000

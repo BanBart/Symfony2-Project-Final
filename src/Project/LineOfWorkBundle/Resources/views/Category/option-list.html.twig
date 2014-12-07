@@ -1,0 +1,5 @@
+<select class="form-control custom-form">
+    {% for category in categories %}
+        <option value="{{ category.slug }}">{{ category.name }}</option>
+    {% endfor %}
+</select> 

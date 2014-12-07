@@ -1,0 +1,20 @@
+<div class="slider">
+    <div class="container">
+        <div class="row">           
+            <div class="col-lg-12">
+                <ul class='nav navbar-nav'>
+                    {#<li><a href="">Promoted offers</a></li>#}
+                    <li class='active'><a href="#">Latest job offers</a></li>                              
+                </ul>
+            </div>
+
+            <div class="clearfix visible-lg-block"></div>
+            <div class="border-bottom "></div>
+            <div class="col-lg-12 slider-carousel">
+                <div class="row">
+                            {{ render(controller('ProjectLineOfWorkBundle:Job:latestJobs')) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

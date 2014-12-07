@@ -1,0 +1,3 @@
+project_line_of_work_user_profile:
+    path: /profile
+    defaults: { _controller: ProjectLineOfWorkBundle:User:profile }

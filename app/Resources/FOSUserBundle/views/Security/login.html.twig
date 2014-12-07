@@ -1,0 +1,19 @@
+{% extends 'FOSUserBundle::layout.html.twig' %}
+
+{% block fos_user_content %}
+        <form id='loginForm' action="{{ path("fos_user_security_check") }}" method="post" class='form-inline'>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            
+            <label for="username" class='sr-only'>Username/Email:</label>
+            <input type="text" id="username" name="_username" class='form-control custom-form input-sm' placeholder='Username/Email' />
+            
+            <label for="password" class='sr-only'>Password:</label>
+            <input type="password" id="password" name="_password" class='form-control custom-form input-sm' placeholder='Password' />
+            {#<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+            <input type="hidden" name="_target_path" value="{{ app.request.uri }}" />#}            
+            <button type='submit' id="_submit" name="_submit" class='btn btn-sm custom-button has-spinner'>
+                <span class="spinner"><i class="glyphicon gly glyphicon-refresh"></i></span>
+                Login</button>                                            
+        </form>         
+        {{ parent() }}
+{% endblock fos_user_content %}

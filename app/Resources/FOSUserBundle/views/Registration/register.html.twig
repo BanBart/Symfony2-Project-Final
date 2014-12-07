@@ -1,0 +1,14 @@
+{% extends 'ProjectLineOfWorkBundle::layout.html.twig' %}
+
+{% block register %}
+    {% block fos_user_content %}
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="body-header">
+                <h2>Create an account</h2>
+            </div>        
+            {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+        </div>  
+    {% endblock fos_user_content %}
+{% endblock register %}
+
+

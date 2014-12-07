@@ -1,0 +1,31 @@
+{% extends 'ProjectLineOfWorkBundle::layout.html.twig' %}
+
+{% block main %}
+    <div class="col-lg-8 col-lg-offset-2 body-header">
+            <h2>Category - {{ category.name }}</h2>
+    </div>
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="row">
+            <div class="col-lg-12">
+                {{ include('ProjectLineOfWorkBundle:Job:list.html.twig', {'jobs':category.activejobs}) }}
+            </div>
+            <div class="col-lg-4 col-lg-offset-4">
+                <ul class='pager'>                  
+                    {% if current_page > 1 %}           
+                        <li><a href="{{ path('project_line_of_work_category_show',{'slug':category.slug , 'page':previous_page}) }}">Prevous page</a></li>
+                    {% endif %}
+                    {% if total_jobs > jobs_per_page %}
+                        <li><a href="{{ path('project_line_of_work_category_show',{'slug':category.slug , 'page':next_page}) }}">Next page</a></li>
+                    {%endif %}
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <strong>{{ total_jobs }}</strong> jobs in this category
+                {% if last_page > 1 %}
+                    - page <strong>{{ current_page }}/{{ last_page }}</strong>
+                {% endif %}
+            </div>
+        </div>
+    </div> 
+                
+{% endblock %}

@@ -1,0 +1,28 @@
+{% block stylesheets %}
+            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+            {% stylesheets  '@bootstrap_css' 
+                '@ProjectLineOfWorkBundle/Resources/public/css/jquery.css'
+                filter='?uglifycss'
+            %}
+                <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+            {% endstylesheets %}
+{% endblock %}
+
+
+<body>
+<div id="divArea" style="background-color: silver; width: 100px; height: 100px;">
+
+
+    
+    
+    {% block javascripts %}
+            {% javascripts '@jquery' '@bootstrap_js'
+                '@ProjectLineOfWorkBundle/Resources/public/js/jquery.js'
+                filter='?uglifyjs2' %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+    {% endblock %} 
+</body>
+
+        

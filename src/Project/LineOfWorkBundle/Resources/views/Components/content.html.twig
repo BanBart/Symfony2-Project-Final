@@ -1,0 +1,99 @@
+<div class="clearfix visible-lg-block"></div>
+                
+                <div class="col-lg-4">
+                    <div class="contact-block">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="square">
+                                    {% image '@ProjectLineOfWorkBundle/Resources/public/images/icon-contact-block.png' %}
+                                        <img src="{{ asset_url }}" alt="Example" />
+                                    {% endimage %}
+                                </div>
+                            </div>
+                            <div class="col-lg-8 text-right">
+                                <h3>Contact</h3>
+                                <p>11-111 City, ul.Random<br>
+                                tel: +48 999 99 99 </p>
+                                
+                            </div>
+                            <div class="clearfix visible-lg-block"></div>
+                            <div class="col-lg-4">
+                                <form action="{{ path('project_line_of_work_contact') }}">
+                                    <button type='submit' class="btn custom-button form-control">Form</button>
+                                </form>                             
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class='form-control custom-form  text-right' value='lineofwork@gmail.com' readonly />
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="feedback">
+                        <div class="row">
+                            <div class="col-lg-10 text-right">
+                                <div class="feedback">
+                                    <h4>Our Feedback</h4>
+                                </div>
+                                {{ render(controller('ProjectLineOfWorkBundle:Feedback:selectOneFeedback')) }}        
+                            </div>
+                            <div class="col-lg-2 feedback-icon">
+                                
+                                    {% image '@ProjectLineOfWorkBundle/Resources/public/images/feedback-icon.png' %}
+                                        <img src="{{ asset_url }}" alt="Example" />
+                                    {% endimage %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 border-r-l">
+                    <div class="advertisement-block">
+                        <div class='commercial'>
+                        {{ render(controller('ProjectLineOfWorkBundle:Page:commercial')) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="newsletter-block">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <h3>Newsletter</h3>
+                                <p>Would you like to recive everyday emails with latest jobs?</p>
+                                
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="square">
+                                    {% image '@ProjectLineOfWorkBundle/Resources/public/images/icon-newsletter-block.png' %}
+                                        <img src="{{ asset_url }}" alt="Example" />
+                                    {% endimage %}
+                                </div>                                       
+                            </div>
+                            <div class="clearfix visible-lg-block"></div>
+                            <div class="col-lg-8">
+                                <input type="text" class='form-control custom-form' placeholder='Write your email.' />
+                            </div>
+                            <div class="col-lg-4">
+                                <button type='submit' class="btn custom-button form-control">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hint">
+                        <div class="row">
+                            <div class="col-lg-2 info-icon">
+                                
+                                    {% image '@ProjectLineOfWorkBundle/Resources/public/images/info-icon.png' %}
+                                        <img src="{{ asset_url }}" alt="Example" />
+                                    {% endimage %}
+                               
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="feedback">
+                                    <h4>Did you know?</h4>
+                                </div>
+                                {{ render(controller('ProjectLineOfWorkBundle:Page:oddity')) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-lg-block"></div>
+                <div class="border-bottom"></div>
+                

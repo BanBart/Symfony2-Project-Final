@@ -1,0 +1,17 @@
+{% extends 'ProjectLineOfWorkBundle::layout.html.twig' %}
+{% block main %}
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="body-header">
+            <h2>Contact</h2>
+        </div>
+        <p>Do you have any questions or other important things to say? Fill this form and submit.
+        We will answer as soon as possible.</p>
+        
+        <form action="{{ path('project_line_of_work_contact') }}" method='POST'>
+            
+            {{ form_widget(form) }}
+            
+            <button type='submit' class="btn custom-button pull-right">Send</button>
+        </form>
+    </div>  
+{% endblock %}

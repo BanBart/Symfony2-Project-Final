@@ -1,0 +1,3 @@
+jquery:
+    path: /
+    defaults: { _controller: ProjectLineOfWorkBundle:Jquery:test }

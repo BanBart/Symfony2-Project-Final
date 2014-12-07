@@ -2,7 +2,7 @@ imports:
     - { resource: parameters.yml }
     #- { resource: parameters_test.yml }
     - { resource: security.yml }
-    #- { resource: @ProjectLineOfWorkBundle/Resources/config/config.yml }
+    - { resource: @ProjectLineOfWorkBundle/Resources/config/config.yml }
 
 framework:
     #esi:             ~

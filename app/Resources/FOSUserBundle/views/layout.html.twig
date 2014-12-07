@@ -1,0 +1,27 @@
+{% extends app.request.get('_route') == 'fos_user_security_login' ? 'ProjectLineOfWorkBundle::layout_login.html.twig' : 'ProjectLineOfWorkBundle::layout_null.html.twig' %}
+
+{% block register %}
+{% if app.user %} 
+    <div>
+        <p class="navbar-text custom-navbar-text">Logged in as:<a href="{{ path('project_line_of_work_user_profile') }}"> {{ app.user.username }}</a></p>
+        <form action="{{ path('fos_user_security_logout') }}">
+            <button type="submit" class="btn custom-button btn-sm">Logout</button>
+        </form>
+    </div> 
+{% else %}
+            {% block fos_user_content %}           
+            <div class="clearfix visible-lg-block"></div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div id="failedLogin" class="hidden">
+                        <p class='text-danger'>Incorrect login or password!</p>
+                        <p><a href="{{ path('fos_user_resetting_request') }}">Forgot a password?    </a>
+                             <a href="{{ path('fos_user_registration_register') }}">Register</a></p>
+                    </div>
+                </div>
+                
+            </div>
+          {% endblock fos_user_content %}  
+     
+{% endif %}
+{% endblock register %}

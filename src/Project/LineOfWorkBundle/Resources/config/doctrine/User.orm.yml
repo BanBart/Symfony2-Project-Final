@@ -1,0 +1,21 @@
+Project\LineOfWorkBundle\Entity\User:
+    type: entity
+    repositoryClass: Project\LineOfWorkBundle\Repository\UserRepository
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        created_at:
+            type: datetime
+        
+
+    oneToMany:
+        jobs:
+            targetEntity: Job
+            mappedBy: user
+    lifecycleCallbacks:
+        prePersist: [setCreatedAtValue]
+
+            

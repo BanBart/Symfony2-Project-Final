@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+        <title>{% block title %}Homepage{% endblock %} - Line Of Work</title>
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block stylesheets %}
+            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+            {% stylesheets  '@bootstrap_css' filter='?uglifycss'%}
+                <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+            {% endstylesheets %}
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        
+        {% block header %}{% endblock header %}                     
+
+        {% block slider %}{% endblock slider %}
+        <div class="container">
+            <div class="row">
+                
+                    {% block body %}{% endblock body %}  
+                
+                    {% block footer %}{% endblock footer %}    
+                               
+            </div>
+        </div>
+         
+        {% block javascripts %}
+            {% javascripts '@jquery' '@bootstrap_js'
+                '@ProjectLineOfWorkBundle/Resources/public/js/custom.js'
+                'bundles/fosjsrouting/js/router.js'
+                filter='?uglifyjs2' %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+            <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+        {% endblock %}         
     </body>
 </html>
