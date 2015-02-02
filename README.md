@@ -13,7 +13,7 @@ You can check how this site looks at www.sakyhank.vot.pl
     -There may occurs some problems with mails.
 
     -you can sign in as user1 with password: pass1, creation of acc may not work
-    because of gmail and thier privacy policy.
+    because of google and thier privacy policy.
 
     -be aware of bugs in responsive layout desing, i'll update it in future, 
     maybe:). 
