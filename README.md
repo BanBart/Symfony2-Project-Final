@@ -1,11 +1,12 @@
-LineOfWork - Symfony2 Project developed in collegue.
+LineOfWork - Symfony2 Project.
 ================================================================================
 
 I developed this project in collegue, main reason was to obtain some skills in 
 PHP and js programming. 
 
 ================================================================================
-You can check how this site looks at www.sakyhank.vot.pl 
+You can check how this site looks at www.sakyhank.vot.pl
+ 
     -The search will not work, because i have no idea how to run Elastica search
     engine on remote server, my tries failed ;D
 
