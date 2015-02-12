@@ -1,5 +1,5 @@
 {% for job in jobs %}
-<div class="col-lg-3">
+<div class="col-md-3">
     <div class='job-slider text-center'>
         <h3><a href="{{ path('project_line_of_work_job_show', {'id':job.id}) }}">{{ job.position }}</a></h3>
         <p><a href="{{ path('project_line_of_work_category_show', {'slug':job.category.slug}) }}">{{ job.category }}</a></p>

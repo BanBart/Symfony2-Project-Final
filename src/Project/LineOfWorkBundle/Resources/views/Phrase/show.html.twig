@@ -1,6 +1,6 @@
-<div class="col-lg-12 phrase">
+<div class="col-md-12 phrase">
     <div class="row">                             
-        <div class="col-lg-2 col-lg-offset-1">
+        <div class="col-md-2 col-md-offset-1">
             <div class="number">
                 {% for phrase in phrases %}
                     <h1 class='{{ loop.first ? 'phrase-active-number' : 'phrase-normal-number' }}'> 
@@ -9,7 +9,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-lg-9 catchy">
+        <div class="col-md-9 catchy">
             {% for phrase in phrases %}
             <div class='{{ loop.first ? 'phrase-active-slogan' : 'phrase-normal-slogan' }}'> 
                 <h3>{{ phrase.mediumheader }}</h3>
@@ -17,11 +17,11 @@
             </div>
             {% endfor %}
         </div>
-        <div class="clearfix visible-lg-block"></div>
-        <div class="col-lg-10 col-lg-offset-1">
+        <div class="clearfix visible-md-block"></div>
+        <div class="col-md-10 col-md-offset-1">
             <div class="border-bottom"></div>
         </div>
-        <div class="col-lg-9 col-lg-offset-3 bottom-phrase">
+        <div class="col-md-9 col-md-offset-3 bottom-phrase">
             {% for phrase in phrases %}
                 <p class='{{ loop.first ? 'phrase-active-bottom' : 'phrase-normal-bottom' }}'> 
                     {{ phrase.bottomparagraph }}

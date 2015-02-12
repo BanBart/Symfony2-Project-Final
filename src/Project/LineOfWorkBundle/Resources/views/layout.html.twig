@@ -23,7 +23,7 @@
                     <span class="icon-bar"></span>
                 </button>         
             </div>
-            <div class="col-lg-12 text-center top-line">               
+            <div class="col-md-12 text-center top-line">               
                     {% block alert %}
                         {% for flashMessage in app.session.flashbag.get('success') %}
                             <div class="alert alert-success alert-dismissible" role="alert">
@@ -45,8 +45,8 @@
                         {% endfor %}
                     {% endblock alert %}
             </div>
-            <div class="clearfix visible-lg-block"></div>
-            <div id="top-menu" class="col-lg-5 top-list">
+            <div class="clearfix visible-md-block"></div>
+            <div id="top-menu" class="col-md-5 top-list">
                 <ul class="nav navbar-nav">
                     <li><a href="{{ path('project_line_of_work_homepage') }}">www.lineofwork.com</a></li>
                     {% block top_navigation_dropdown_menu %}{% endblock top_navigation_dropdown_menu %}
@@ -54,12 +54,12 @@
                     <li class="{% if app.request.get('_route') == 'project_line_of_work_about' %}active{%endif%}"><a href="{{ path('project_line_of_work_about') }}">About</a></li>
                 </ul>
             </div>
-            <div class="col-lg-5">     
+            <div class="col-md-5">     
                 <div class="login">
                     {{ render(controller('FOSUserBundle:Security:login')) }}
                 </div>      
             </div>
-            <div id="lng" class="col-lg-2 top-list">
+            <div id="lng" class="col-md-2 top-list">
                 <ul class="nav navbar-nav pull-right">
                         <li class='{% if app.request.get('_locale') =='pl'%} active {% endif %}'>
                             <a href="{{ path('project_line_of_work_language',{ 'language': 'pl', 'route':app.request.get('_route') }) }}">PL</a>
@@ -71,39 +71,39 @@
                 </ul>
             </div>
             
-            <div class="col-lg-8">
+            <div class="col-md-8">
                 <div class="row">
-                    <div class="col-lg-12 logo">
+                    <div class="col-md-12 logo">
                         <a href="{{ path('project_line_of_work_homepage') }}">
                         {% image '@ProjectLineOfWorkBundle/Resources/public/images/logo-lineofwork.png' %}
                             <img src="{{ asset_url }}" alt="Example" width='388' />
                         {% endimage %} 
                         </a>
                     </div>
-                    <div class="clearfix visible-lg-block"></div>
+                    <div class="clearfix visible-md-block"></div>
                     {% block phrase %}
                         {{ render(controller('ProjectLineOfWorkBundle:Phrase:show')) }}                   
                     {% endblock phrase %}
                 </div>
             </div>
-            <div id="search" class="col-lg-3 col-lg-offset-1">
+            <div id="search" class="col-md-3 col-md-offset-1">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <ul class="nav navbar-nav">                                
                             <li class="active"><a href="#">JOBS</a></li>
                             {#<li><a href="#">RESUMES</a></li>#}
                         </ul>                                                        
                     </div>                     
-                    <div class="clearfix visible-lg-block"></div>
-                    <div class="col-lg-12">                      
+                    <div class="clearfix visible-md-block"></div>
+                    <div class="col-md-12">                      
                         {{ render(controller('ProjectLineOfWorkBundle:Page:search')) }}                       
                     </div>
                 </div>                 
             </div>                                               
-            <div class="clearfix visible-lg-block"></div>  
-            <div id='menu' class="col-lg-12 medium-list">
+            <div class="clearfix visible-md-block"></div>  
+            <div id='menu' class="col-md-12 medium-list">
                 <div class="row">
-                        <div class="col-lg-9">
+                        <div class="col-md-9">
                 <ul class="nav navbar-nav">
                     
                     <li class='{% if app.request.get('_route') == 'project_line_of_work_homepage' %}active{%endif%}'>
@@ -130,7 +130,7 @@
                     {% endif %}
                 </ul>                            
                         </div>
-                <div class="col-lg-2 col-lg-offset-1">
+                <div class="col-md-2 col-md-offset-1">
                     <form action="{{ path('project_line_of_work_job_new') }}">
                         <button type='submit' class='btn job-button'>Post a Job</button>
                     </form>
@@ -142,8 +142,8 @@
 
                 
             </div>
-            <div class="col-lg-12 medium-list-backdrop"></div>
-            <div class="clearfix visible-lg-block"></div>                                                                                                                                                                                                  
+            <div class="col-md-12 medium-list-backdrop"></div>
+            <div class="clearfix visible-md-block"></div>                                                                                                                                                                                                  
         </nav>
              </div>
             </div>
@@ -154,7 +154,7 @@
         
 {% block body %}
 
-    <div class="col-lg-12 body">
+    <div class="col-md-12 body">
         <div class="row">
             {% block register %}
             {% endblock register %}
@@ -168,13 +168,13 @@
 
 {% block footer %}
     <footer> 
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     
                     <div class="row bottom-first-footer">
-                        <div class="col-lg-4 text-center">
+                        <div class="col-md-4 text-center">
                             <a href="tel:18475555555">1-847-555-5555</a>
                         </div>
-                        <div class="col-lg-4 text-center">
+                        <div class="col-md-4 text-center">
                             <ul class='list-inline'>
                                 <li class='{% if app.request.get('_route') == 'project_line_of_work_homepage' %}active{%endif%}'>
                                     <a href='{{ path('project_line_of_work_homepage')}}'>Home</a>
@@ -196,20 +196,20 @@
                                 {% endif %}
                             </ul>
                         </div>
-                        <div class="col-lg-4 text-center">
+                        <div class="col-md-4 text-center">
                             <a href="#mainHeader">return to top</a>
                         </div>
                     </div>
                 </div>
-                <div class="clearfix visible-lg-block"></div>               
-                <div class="col-lg-3 col-lg-offset-1">
+                <div class="clearfix visible-md-block"></div>               
+                <div class="col-md-3 col-md-offset-1">
                     <div class="border-bottom"></div>
                     <div class="row copyright">
-                        <div class="col-lg-7 text-right copyright-text">
+                        <div class="col-md-7 text-right copyright-text">
                             <p class='p-cop'>&copy; 2014 LineOfWork</p>
                             <p class='p-res'>All rights reserved</p>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-md-5">
                             <div class="logo-firm">
                                 {% image '@ProjectLineOfWorkBundle/Resources/public/images/logo-small-lineofwork.png' %}
                                     <img src="{{ asset_url }}" alt="Example" />
@@ -218,15 +218,15 @@
                         </div>
                     </div>                   
                 </div>
-                <div class="col-lg-3 col-lg-offset-4">
+                <div class="col-md-3 col-md-offset-4">
                     <div class="border-bottom"></div>
                     <div class="row copyright-by">
-                        <div class="col-lg-5">
+                        <div class="col-md-5">
                             <div class="logo-sakyhank">
                                 
                             </div>
                         </div>
-                        <div class="col-lg-7 copyright-by-text">
+                        <div class="col-md-7 copyright-by-text">
                             <p>design by <a>SakyHank</a></p>
                             <p>developed by <a>SakyHank</a></p>
                         </div>
